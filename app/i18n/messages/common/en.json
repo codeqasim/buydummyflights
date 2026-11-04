@@ -1,0 +1,48 @@
+{
+  "brand": { "name": "Buy Dummy Flights", "tagline": "Flight reservations for visa applications" },
+  "a11y": {
+    "skip": "Skip to main content",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "theme": "Switch between light and dark mode",
+    "primaryNav": "Primary",
+    "footerNav": "Footer",
+    "breadcrumb": "Breadcrumb",
+    "home": "Buy Dummy Flights home"
+  },
+  "nav": {
+    "how": "How it works",
+    "pricing": "Pricing",
+    "sample": "Sample ticket",
+    "faq": "FAQ",
+    "order": "Order",
+    "why": "Why us",
+    "uses": "Use cases"
+  },
+  "cta": { "order": "Get my flight reservation", "orderShort": "Order now", "seePricing": "See pricing" },
+  "form": {
+    "trip": "Trip type",
+    "oneWay": "One-way",
+    "return": "Return",
+    "from": "From",
+    "to": "To",
+    "fromPh": "City or airport",
+    "toPh": "City or airport",
+    "depart": "Departure date",
+    "returnDate": "Return date",
+    "passengers": "Passengers",
+    "passengerOne": "1 passenger",
+    "passengerMany": "{n} passengers",
+    "submit": "Continue to order",
+    "note": "No payment on this step. You pick your plan next."
+  },
+  "footer": {
+    "about": "Verifiable flight reservations for visa applications, proof of onward travel and trip planning.",
+    "product": "Service",
+    "help": "Help",
+    "disclaimer": "Buy Dummy Flights provides flight reservations, not paid airline tickets. A reservation does not guarantee a visa. Always follow the requirements of the embassy or consulate you apply to.",
+    "rights": "© {year} Buy Dummy Flights. All rights reserved.",
+    "emailLabel": "Email"
+  },
+  "breadcrumb": { "home": "Home" }
+}

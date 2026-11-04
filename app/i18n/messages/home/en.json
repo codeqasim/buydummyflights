@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "title": "Buy Dummy Flight Tickets for Visa | BuyDummyFlights",
+    "description": "Order a verifiable dummy flight reservation with a real PNR for your visa application. Onward or return itinerary sent to your inbox. No ticket purchase."
+  },
+  "hero": {
+    "eyebrow": "Flight reservations for visa applications",
+    "h1": "Buy dummy flight tickets for your {accent}",
+    "h1Accent": "visa application",
+    "lead": "Get a verifiable flight reservation with a booking reference (PNR) as proof of onward or return travel, without buying an airline ticket.",
+    "point1": "Onward and return itineraries",
+    "point2": "Sent to your inbox as a PDF",
+    "point3": "You never pay for the airfare",
+    "formTitle": "Plan your reservation",
+    "formLead": "Tell us the route. Pick your plan on the next step."
+  },
+  "trust": {
+    "title": "Why applicants use a flight reservation",
+    "pnr": {
+      "title": "Booking reference (PNR)",
+      "text": "Every itinerary carries a booking reference and full flight details."
+    },
+    "noTicket": {
+      "title": "No ticket purchase",
+      "text": "You pay for the reservation document, not for the airfare."
+    },
+    "email": {
+      "title": "Delivered to your email",
+      "text": "A clean PDF itinerary you can attach to your application."
+    },
+    "airlines": {
+      "title": "Real airline routes",
+      "text": "Routes and flight numbers follow real airline schedules."
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Your reservation in three steps",
+    "lead": "No account, no airline booking and no waiting for a refund.",
+    "steps": {
+      "search": {
+        "title": "Enter your trip",
+        "text": "Add where you are flying from and to, your dates and the number of travellers."
+      },
+      "details": {
+        "title": "Choose a plan and pay",
+        "text": "Select one-way, return or multi-city, then confirm the passenger name exactly as on the passport."
+      },
+      "receive": {
+        "title": "Receive your itinerary",
+        "text": "Your flight reservation arrives by email as a PDF, ready to attach to your visa application."
+      }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple pricing per reservation",
+    "lead": "One price per reservation. No subscription and no hidden airline fees.",
+    "popular": "Most chosen",
+    "perOrder": "per reservation",
+    "choose": "Choose this plan",
+    "placeholderNote": "Prices on this page are placeholders until confirmed.",
+    "plans": {
+      "one-way": {
+        "name": "One-way",
+        "tagline": "Proof of onward travel",
+        "features": [
+          "One flight reservation",
+          "Booking reference (PNR)",
+          "PDF itinerary by email",
+          "Email support"
+        ]
+      },
+      "return": {
+        "name": "Return",
+        "tagline": "Outbound and return flights",
+        "features": [
+          "Outbound and return flights",
+          "Booking reference (PNR)",
+          "PDF itinerary by email",
+          "Email support"
+        ]
+      },
+      "multi": {
+        "name": "Multi-city",
+        "tagline": "Longer or group itineraries",
+        "features": [
+          "Several connected flights",
+          "Booking reference (PNR)",
+          "PDF itinerary by email",
+          "Email support"
+        ]
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Why Buy Dummy Flights",
+    "title": "Built for visa paperwork",
+    "lead": "Everything an embassy officer expects to see on a travel itinerary, and nothing you do not need.",
+    "items": {
+      "pnr": {
+        "title": "Real PNR format",
+        "text": "Reservations use the standard booking reference layout that visa officers know."
+      },
+      "noTicket": {
+        "title": "No airfare at risk",
+        "text": "Keep your money until your visa is approved, then book your real flight."
+      },
+      "format": {
+        "title": "Clear, clean PDF",
+        "text": "Passenger name, route, dates, flight numbers and reference on one readable page."
+      },
+      "support": {
+        "title": "Human support",
+        "text": "Questions about names, dates or format? Write to us and we reply by email."
+      },
+      "privacy": {
+        "title": "Minimal data",
+        "text": "We only ask for what the itinerary needs: name, email and trip details."
+      },
+      "fast": {
+        "title": "Fast delivery",
+        "text": "Your itinerary is sent by email after your order is confirmed."
+      }
+    }
+  },
+  "sample": {
+    "eyebrow": "Sample",
+    "title": "See what your itinerary looks like",
+    "lead": "This is an illustration. Names, flights and reference are examples only.",
+    "badge": "Sample only",
+    "ticket": {
+      "title": "Flight reservation",
+      "passenger": "Passenger",
+      "passengerValue": "Alex Traveller",
+      "reference": "Booking reference",
+      "referenceValue": "A1B2C3",
+      "flight": "Flight",
+      "flightValue": "XX 123",
+      "date": "Date",
+      "dateValue": "15 Mar 2027",
+      "boarding": "Departs",
+      "boardingValue": "09:40",
+      "arrives": "Arrives",
+      "arrivesValue": "14:05",
+      "status": "Status",
+      "statusValue": "Confirmed",
+      "fromCity": "Lahore",
+      "toCity": "Paris",
+      "duration": "Direct route example"
+    },
+    "points": [
+      "Passenger name as on the passport",
+      "Booking reference (PNR)",
+      "Route, flight number and dates"
+    ]
+  },
+  "uses": {
+    "eyebrow": "Use cases",
+    "title": "Where a flight reservation helps",
+    "lead": "Always check the exact documents your embassy or consulate asks for.",
+    "items": {
+      "schengen": {
+        "title": "Schengen visa",
+        "text": "Show your planned entry and exit with a round-trip itinerary."
+      },
+      "onward": {
+        "title": "Proof of onward travel",
+        "text": "Airlines and border officers may ask for a ticket out of the country."
+      },
+      "uk": {
+        "title": "UK and US visit visas",
+        "text": "Add a clear travel plan to your supporting documents."
+      },
+      "canada": {
+        "title": "Canada and other countries",
+        "text": "Many applications ask for planned travel dates and a route."
+      }
+    }
+  },
+  "reviews": {
+    "eyebrow": "Customer feedback",
+    "title": "What travellers say",
+    "lead": "Real customer reviews will be shown here once they have been collected and approved.",
+    "placeholderLabel": "Placeholder",
+    "placeholderQuote": "A real customer review will appear here.",
+    "placeholderMeta": "Verified customer"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about dummy flight tickets",
+    "lead": "Short, honest answers before you order.",
+    "items": {
+      "what": {
+        "q": "What is a dummy flight ticket?",
+        "a": "A dummy flight ticket is a flight reservation with a booking reference (PNR) that shows your planned route and dates. It is not a paid airline ticket, so you do not buy a seat. Visa applicants use it as proof of onward or return travel."
+      },
+      "legal": {
+        "q": "Is a dummy flight ticket legal?",
+        "a": "Using a flight reservation as a travel itinerary is common in visa applications. You must never present it as a purchased ticket or misstate your plans, and you should always follow what your embassy or consulate asks for. The decision on your visa is always theirs."
+      },
+      "verify": {
+        "q": "Can the reservation be verified?",
+        "a": "Each itinerary carries a booking reference (PNR) and the flight details in a standard layout. How an individual airline or office checks a booking can differ, so we cannot promise how a specific officer will verify it."
+      },
+      "accepted": {
+        "q": "Will my embassy accept it?",
+        "a": "Many applicants use flight reservations, but every embassy sets its own rules and we cannot guarantee acceptance or a visa. Read the checklist for your visa category before you order."
+      },
+      "time": {
+        "q": "How fast do I receive it?",
+        "a": "After your order is confirmed, your itinerary is sent to your email as a PDF. The delivery time for your plan is shown at checkout."
+      },
+      "refund": {
+        "q": "Can I get a refund?",
+        "a": "Refund terms are shown at checkout before you pay, so you can read them first."
+      },
+      "change": {
+        "q": "Can I change names or dates?",
+        "a": "If something is wrong or your plans change, contact support with your order reference and we will tell you what can be updated for your plan."
+      },
+      "pay": {
+        "q": "How do I pay?",
+        "a": "Payment options are shown at checkout. You pay for the reservation document only, never for the airline ticket itself."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready for your flight reservation?",
+    "lead": "Enter your trip and have your itinerary in your inbox.",
+    "button": "Get my flight reservation"
+  },
+  "service": {
+    "name": "Dummy flight reservations for visa applications"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "buydummyflights",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "buydummyflights.com: Hono + hono/jsx on Cloudflare Workers Static Assets",
+  "scripts": {
+    "dev": "node tools/dev.mjs",
+    "build:assets": "node tools/build-assets.mjs",
+    "typecheck": "tsc --noEmit",
+    "i18n": "node tools/i18n.mjs",
+    "i18n:check": "node tools/i18n.mjs --check",
+    "links": "node tools/check-links.mjs",
+    "seo": "node tools/check-seo.mjs",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "check": "npm run i18n:check && npm run typecheck && npm run links && npm run seo",
+    "deploy": "wrangler deploy --env preview",
+    "ship": "node tools/ship.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.9.0"
+  },
+  "devDependencies": {
+    "@alpinejs/csp": "^3.14.9",
+    "@alpinejs/intersect": "^3.14.9",
+    "@cloudflare/workers-types": "^4.20250900.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.0",
+    "@tailwindcss/cli": "^4.1.0",
+    "esbuild": "^0.27.3",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.40.0"
+  },
+  "allowScripts": {
+    "esbuild@0.27.3": true,
+    "workerd@1.20260426.1": true,
+    "@parcel/watcher@2.6.0": true,
+    "sharp@0.34.5": true
+  }
+}

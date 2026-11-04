@@ -1,0 +1,2 @@
+# Copy to .dev.vars (git-ignored). No secrets are needed yet; the order API runs in mock mode.
+ORDER_MODE=mock

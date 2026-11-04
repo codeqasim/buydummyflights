@@ -1,0 +1,7 @@
+{
+  "meta": { "title": "Page not found | BuyDummyFlights", "description": "The page you are looking for does not exist. Go back to the home page to order a flight reservation for your visa application." },
+  "h1": "This page took off without us",
+  "lead": "We could not find the page you asked for. It may have moved, or the address may be mistyped.",
+  "home": "Back to the home page",
+  "error": { "h1": "Something went wrong", "lead": "An unexpected error stopped this page from loading. Please try again in a moment." }
+}

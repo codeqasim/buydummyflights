@@ -1,0 +1,28 @@
+{
+  // PRODUCTION is the top level (what Workers Builds deploys with a plain `wrangler deploy`).
+  // INDEXING stays "off" until the owner confirms prices and the order flow (TODO(owner)): the live domain is noindex until then.
+  // PREVIEW is env.preview: a separate Worker on workers.dev. localhost and *.workers.dev are noindex in code (utils/urls.ts).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "buydummyflights",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "build": { "command": "node tools/build-assets.mjs" },
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  "vars": { "ENVIRONMENT": "production", "INDEXING": "off", "SITE_ORIGIN": "https://buydummyflights.com" },
+  "routes": [{ "pattern": "buydummyflights.com", "custom_domain": true }],
+  "env": {
+    "preview": {
+      "name": "buydummyflights-preview",
+      "workers_dev": true,
+      "preview_urls": false,
+      "build": { "command": "node tools/build-assets.mjs" },
+      "assets": { "directory": "./public", "binding": "ASSETS" },
+      "observability": { "enabled": true },
+      "vars": { "ENVIRONMENT": "preview", "INDEXING": "off", "SITE_ORIGIN": "https://buydummyflights.com" }
+    }
+  }
+}

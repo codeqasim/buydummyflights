@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Order a Flight Reservation | BuyDummyFlights",
+    "description": "Choose your plan and confirm your trip details to order a flight reservation for your visa application."
+  },
+  "h1": "Order your flight reservation",
+  "lead": "Check your trip, choose a plan and tell us where to send the itinerary.",
+  "summary": {
+    "title": "Your trip",
+    "empty": "No trip details yet. Add your route and dates first.",
+    "backToForm": "Edit trip details",
+    "route": "Route",
+    "dates": "Dates",
+    "passengers": "Passengers",
+    "oneWay": "One-way",
+    "return": "Return"
+  },
+  "plan": {
+    "title": "Choose a plan",
+    "perOrder": "per reservation",
+    "names": {
+      "one-way": "One-way",
+      "return": "Return",
+      "multi": "Multi-city"
+    }
+  },
+  "contact": {
+    "title": "Where should we send it?",
+    "email": "Email address",
+    "emailPh": "you@example.com",
+    "name": "Passenger full name",
+    "namePh": "As shown on the passport",
+    "submit": "Place order",
+    "pending": "Sending…",
+    "mockTitle": "Order received (preview)",
+    "mockText": "Payments are not connected yet. This preview only checks your details. Reference: {ref}.",
+    "error": "Please check your details and try again."
+  },
+  "notice": "Payment is not connected on this preview. Prices shown are placeholders.",
+  "crumb": "Order"
+}
