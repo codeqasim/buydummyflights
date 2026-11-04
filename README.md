@@ -1,7 +1,7 @@
 # Buy Dummy Flights — buydummyflights.com on Hono + Cloudflare Workers
 
 **Status:** home page and `/order` built (r1). The live domain stays **noindex** until the owner flips the launch gate
-(§8). Prices and the order flow are placeholders. **Last revision:** 2026-11-05 (r1).
+(§8). Prices and the order flow are placeholders. **Last revision:** 2026-11-05 (r2).
 
 This file is the single source of truth for the project, written for a human developer and an AI coding agent alike.
 Update it in the same change that alters what it describes, and add a dated line to the revision history. Do not
@@ -135,6 +135,12 @@ Layering rule: `data/` knows nothing about HTTP; `routes/` reads the request and
 - Workers: `buydummyflights` (production, custom domain `buydummyflights.com`, `workers_dev` off) and
   `buydummyflights-preview` (workers.dev, noindex). Both are configured in `wrangler.jsonc` (production = top level,
   preview = `env.preview`). `www` is redirected to the apex inside the Worker as well as by the zone rule.
+- **Workers Builds** (Git integration, GitHub app on `codeqasim`): a push to `main` builds and deploys both Workers with
+  `npm ci && npm run build:assets`, then `npx wrangler deploy` (production) and `npx wrangler deploy --env preview` (preview).
+  The preview trigger is limited to `main` because Cloudflare rejected a `*` branch include with no excludes. Both triggers use
+  an existing account build token ("Workers Builds - 2026-09-04 01:11"); no secrets live in the repo.
+- Preview URL: https://buydummyflights-preview.phptravels.workers.dev (always noindex). Production: https://buydummyflights.com
+  (noindex until `INDEXING=on`). Only the apex is a Worker custom domain; `www` stays the proxied placeholder behind the zone 301 rule.
 - Compatibility date is 2026-04-01 so that the local workerd accepts it; raise it only with a local `wrangler` that supports it.
 
 ---
@@ -164,3 +170,4 @@ The best-practices loss is one deprecation warning inside the vendored Alpine bu
 
 - 2026-11-05 r0: project created; domain, zone and README.
 - 2026-11-05 r1: Hono + hono/jsx site scaffolded: home page, /order mock, SEO system, CSP, i18n, tools, Workers config, launch gate.
+- 2026-11-05 r2: Workers `buydummyflights` and `buydummyflights-preview` created, Workers Builds connected to this repo, custom domain buydummyflights.com attached.
