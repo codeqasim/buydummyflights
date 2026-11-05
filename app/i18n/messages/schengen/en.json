@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Dummy Ticket for Schengen Visa Application | BuyDummyFlights",
+    "description": "A flight reservation for your Schengen visa application: round-trip itinerary with booking reference, delivered as a PDF. No airfare to pay."
+  },
+  "crumb": "Schengen visa",
+  "h1": "Flight reservation for a Schengen visa",
+  "lead": "Show your planned entry and exit with a round-trip itinerary, without paying for a ticket before your visa is decided.",
+  "body": [
+    "## Why Schengen applications ask for flights",
+    "The Schengen short-stay visa application commonly asks you to show the purpose and length of your trip. Many consulates list a round-trip reservation or itinerary among the documents they expect, and many applicants include one. Requirements differ by the country you apply to and the visa centre you use, so always follow the official list for your application.",
+    "A reservation gives you a clear itinerary with a booking reference, so the dates on your form, your hotel booking and your travel insurance can all be matched against one document.",
+    "## What you receive",
+    "- A return itinerary with an outbound and a return flight\n- Your name as it appears on your passport\n- Route, dates and flight numbers\n- A booking reference (PNR)\n- A PDF delivered by email",
+    "See the layout on the [sample ticket page](/sample-ticket).",
+    "## How to choose dates for Schengen",
+    "1. **Arrival** should be the date you give on the application form as your intended entry.\n2. **Departure** should fall inside the stay you are asking for and leave a sensible margin.\n3. **Multiple countries.** If you visit several Schengen countries, the itinerary should be consistent with where you will spend the most time or where you first enter, following the rules for choosing the right consulate.\n4. **Insurance and hotels.** Dates for travel insurance and accommodation should cover the same period.",
+    "Our detailed guide to [Schengen visa flight itinerary requirements](/blog/schengen-visa-flight-itinerary-requirements) walks through each of these points.",
+    "## Return or multi-city?",
+    "A **return** itinerary covers most Schengen applications: one flight in, one flight out. If you will enter one country and leave from another, a **multi-city** itinerary can show that open-jaw plan. [Pricing](/pricing) lists the plans.",
+    "## What a reservation cannot do",
+    "> A reservation is not a paid ticket and it does not guarantee a visa. We cannot promise that any consulate will accept it.",
+    "Some consulates ask specifically for a paid or refundable ticket. If yours does, a refundable fare is the safer choice. Read [dummy ticket vs real flight booking](/blog/dummy-ticket-vs-real-flight-booking) to compare. Our guide on [whether a dummy ticket is legal for a visa](/blog/is-a-dummy-ticket-legal-for-a-visa) explains how to use a reservation honestly.",
+    "## Build a consistent file",
+    "A Schengen file works best when everything agrees:",
+    "- Dates on the form, itinerary, hotel booking and insurance\n- Names spelled exactly as in the passport\n- A clear purpose and evidence of funds\n- A return plan that makes sense",
+    "If you need a reservation for accommodation as well, see the [hotel reservation page](/hotel-reservation-for-visa) for what we do and do not provide.",
+    "## Ordering",
+    "Enter your trip on the home page, choose a plan and pay at checkout. The validity window of the reservation is shown before you pay. See [how it works](/how-it-works) for the steps.",
+    "Q: Do I need a flight reservation for a Schengen visa?\nA: Many consulates list a flight itinerary or reservation among the supporting documents, and some do not require one. Follow the official checklist for the consulate you apply to.",
+    "Q: Can I use a one-way reservation?\nA: A round-trip itinerary is the usual choice for a short-stay visa. A one-way itinerary is mainly used as [proof of onward travel](/onward-ticket).",
+    "Q: How long should the reservation be valid?\nA: The validity window is shown at checkout. Choose a plan and timing that covers when you submit your application."
+  ]
+}

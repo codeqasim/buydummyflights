@@ -1,5 +1,8 @@
 {
-  "brand": { "name": "Buy Dummy Flights", "tagline": "Flight reservations for visa applications" },
+  "brand": {
+    "name": "Buy Dummy Flights",
+    "tagline": "Flight reservations for visa applications"
+  },
   "a11y": {
     "skip": "Skip to main content",
     "menu": "Open menu",
@@ -8,7 +11,8 @@
     "primaryNav": "Primary",
     "footerNav": "Footer",
     "breadcrumb": "Breadcrumb",
-    "home": "Buy Dummy Flights home"
+    "home": "Buy Dummy Flights home",
+    "dropdown": "Visa tickets menu"
   },
   "nav": {
     "how": "How it works",
@@ -17,9 +21,27 @@
     "faq": "FAQ",
     "order": "Order",
     "why": "Why us",
-    "uses": "Use cases"
+    "uses": "Use cases",
+    "visas": "Visa tickets",
+    "blog": "Blog",
+    "about": "About us",
+    "contact": "Contact",
+    "terms": "Terms of service",
+    "privacy": "Privacy policy",
+    "refund": "Refund policy",
+    "schengen": "Schengen visa",
+    "us": "US visa",
+    "uk": "UK visa",
+    "canada": "Canada visa",
+    "onward": "Onward ticket",
+    "returnTicket": "Return ticket",
+    "hotel": "Hotel reservation"
   },
-  "cta": { "order": "Get my flight reservation", "orderShort": "Order now", "seePricing": "See pricing" },
+  "cta": {
+    "order": "Get my flight reservation",
+    "orderShort": "Order now",
+    "seePricing": "See pricing"
+  },
   "form": {
     "trip": "Trip type",
     "oneWay": "One-way",
@@ -42,7 +64,25 @@
     "help": "Help",
     "disclaimer": "Buy Dummy Flights provides flight reservations, not paid airline tickets. A reservation does not guarantee a visa. Always follow the requirements of the embassy or consulate you apply to.",
     "rights": "© {year} Buy Dummy Flights. All rights reserved.",
-    "emailLabel": "Email"
+    "emailLabel": "Email",
+    "visas": "Visa tickets",
+    "resources": "Resources",
+    "legal": "Legal"
   },
-  "breadcrumb": { "home": "Home" }
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "toc": {
+    "title": "On this page"
+  },
+  "aside": {
+    "label": "Page extras",
+    "ctaTitle": "Need a flight reservation?",
+    "ctaText": "Enter your route and dates and get your itinerary by email.",
+    "related": "Related pages"
+  },
+  "legal": {
+    "draftTitle": "Draft text",
+    "draftText": "This page is a draft written from how the service works. It has not been reviewed by a lawyer and may change before launch."
+  }
 }

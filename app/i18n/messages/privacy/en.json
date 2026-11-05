@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Privacy Policy | BuyDummyFlights",
+    "description": "Draft privacy policy for BuyDummyFlights: what data we collect for a flight reservation, why, how it is used and what choices you have."
+  },
+  "crumb": "Privacy policy",
+  "h1": "Privacy policy",
+  "lead": "We ask only for what your itinerary needs. Here is what that means.",
+  "body": [
+    "## About this policy",
+    "This policy explains what personal data we handle when you use BuyDummyFlights. It is a draft that has not yet been reviewed by a lawyer, and the final wording may change.",
+    "## What we collect",
+    "- **Passenger names**, so the itinerary matches the passport.\n- **Email address**, so we can send your itinerary and reply to you.\n- **Trip details**, such as route, dates and number of travellers.\n- **Order and payment status**, so we can confirm and support your order. Card details are handled by the payment provider shown at checkout.\n- **Messages** you send through the [contact page](/contact).\n- **Basic technical data** needed to run and secure the website.",
+    "Please do not send passport numbers, card numbers or other sensitive details in messages. We do not need them to answer questions.",
+    "## Why we use it",
+    "- To prepare and deliver your itinerary\n- To support your order, including corrections and refunds\n- To keep the website secure and working\n- To meet legal obligations",
+    "## Who sees it",
+    "We share data only as needed to run the service, for example with our payment provider and our email delivery provider, and where the law requires it. We do not sell personal data.",
+    "## Cookies and tracking",
+    "This website is built to avoid unnecessary third-party scripts. If analytics or advertising cookies are added later, this policy and any consent controls will be updated first.",
+    "## How long we keep it",
+    "We keep order data for as long as needed to support your order and to meet legal and accounting obligations, then delete or anonymise it.",
+    "## Your choices",
+    "Depending on where you live, you may have rights to access, correct or delete your data, or to object to some uses. To make a request, use the [contact page](/contact) and include your order reference.",
+    "## Related pages",
+    "See the [terms of service](/terms) and the [refund policy](/refund-policy). The [how it works](/how-it-works) page explains the order process."
+  ]
+}

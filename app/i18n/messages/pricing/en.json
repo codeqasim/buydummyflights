@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Dummy Ticket Price and Plans | BuyDummyFlights",
+    "description": "Simple pricing per flight reservation: one-way, return or multi-city. See what each plan includes and what you never pay for. No subscription."
+  },
+  "crumb": "Pricing",
+  "h1": "Pricing for flight reservations",
+  "lead": "One price per reservation. No subscription, no account fee and no airfare to pay.",
+  "body": [
+    "## What the price covers",
+    "Each plan covers the preparation and delivery of one flight reservation document: your itinerary as a PDF with a booking reference, sent to your email. You pay for the document. The airfare is never part of the price, because you are not buying a seat on a flight.",
+    "> The prices shown on this page are placeholders until they are confirmed. The final price is always shown at checkout before you pay.",
+    "## Choosing the right plan",
+    "- **One-way** suits proof of onward travel. It is a single flight out of a country, often asked for by airlines and border officers. Read more on the [onward ticket page](/onward-ticket).\n- **Return** gives an outbound and a return flight. It suits most visitor visa applications where the form asks for entry and exit dates. See the [return ticket page](/return-ticket).\n- **Multi-city** covers several connected flights, for longer trips or itineraries with more than one stop.",
+    "If you are applying for a Schengen visa and visiting several countries, read the [Schengen visa guide](/dummy-ticket-for-schengen-visa) to see how the itinerary should line up with your form.",
+    "## What every plan includes",
+    "- A flight reservation with a booking reference (PNR)\n- Your name as it appears on the passport\n- Route, dates and flight details\n- A PDF itinerary delivered by email\n- Email support if a name or date needs correcting",
+    "## What you never pay for",
+    "You do not pay for an airline ticket, a seat, luggage or airline taxes. You also do not pay a subscription or create an account. If a payment method or extra charge applies, it is shown at checkout before you confirm.",
+    "## What affects the choice more than price",
+    "Price is rarely the main question. A better question is: **what does my embassy or airline ask for?** If the answer is a paid ticket, a reservation will not meet that requirement, and a refundable fare is the safer choice. Our guide to [airline hold and fare-lock options](/blog/airline-hold-booking-options) compares them.",
+    "## Refunds and changes",
+    "Refund terms are shown at checkout before you pay, so you can read them first. If a name or date on your itinerary is wrong, contact support with your order reference. The [refund policy](/refund-policy) page describes how requests are handled in general terms.",
+    "## Before you pay",
+    "1. Check the passport spelling of every name.\n2. Confirm the dates against your application form.\n3. Read the validity window and refund terms at checkout.",
+    "When you are ready, [see how it works](/how-it-works) or go straight to ordering.",
+    "## Pricing questions",
+    "## How to compare prices honestly",
+    "When you compare providers, check what exactly is included. Ask whether the price covers delivery by email, corrections to names and dates, and a refund route, and whether any extra fees appear at checkout. A low headline price that grows at the last step is not a low price. On this site the total is shown before you confirm the order.",
+    "Q: Is there a discount for several travellers?\nA: Checkout shows the total for your trip before you pay. If a multi-traveller price applies, you will see it there.",
+    "Q: Are there any hidden fees?\nA: The total price is shown at checkout before you confirm. You do not pay airline fares or taxes.",
+    "Q: Which plan do most visa applicants need?\nA: It depends on what the application asks for. A return itinerary is common for visitor visas, and a one-way itinerary is common for proof of onward travel."
+  ]
+}

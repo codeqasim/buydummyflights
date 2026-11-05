@@ -27,8 +27,8 @@ export const websiteSchema = (description: string): Json => ({
   publisher: { '@id': id('organization') },
 })
 
-export const webPageSchema = (p: { path: string; title: string; description: string; image: string; modified: string }): Json => ({
-  '@type': 'WebPage',
+export const webPageSchema = (p: { path: string; title: string; description: string; image: string; modified: string; type?: string }): Json => ({
+  '@type': p.type ?? 'WebPage',
   '@id': `${canonicalUrl(p.path)}#webpage`,
   url: canonicalUrl(p.path),
   name: p.title,
@@ -54,13 +54,13 @@ export const faqSchema = (items: { q: string; a: string }[]): Json => ({
 })
 
 // PRICES ARE PLACEHOLDERS (data/site.ts), SO THE SERVICE CARRIES PLAN NAMES ONLY, NO Offer PRICE, UNTIL THE OWNER CONFIRMS THEM.
-export const serviceSchema = (p: { name: string; description: string; serviceType: string; planNames: Record<string, string> }): Json => ({
+export const serviceSchema = (p: { path?: string; name: string; description: string; serviceType: string; planNames: Record<string, string> }): Json => ({
   '@type': 'Service',
-  '@id': id('service'),
+  '@id': p.path && p.path !== '/' ? `${canonicalUrl(p.path)}#service` : id('service'),
   name: p.name,
   serviceType: p.serviceType,
   description: p.description,
-  url: `${site.origin}/`,
+  url: canonicalUrl(p.path ?? '/'),
   provider: { '@id': id('organization') },
   areaServed: { '@type': 'Place', name: 'Worldwide' },
   hasOfferCatalog: {
@@ -68,6 +68,36 @@ export const serviceSchema = (p: { name: string; description: string; serviceTyp
     name: p.name,
     itemListElement: plans.map((pl) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: p.planNames[pl.id] } })),
   },
+})
+
+// BLOG. THE AUTHOR IS THE ORGANISATION (NO INVENTED PERSON); wordCount IS COUNTED FROM THE VISIBLE TEXT.
+export const blogPostingSchema = (p: { path: string; headline: string; description: string; image: string; published: string; modified: string; category: string; keywords: string[]; words: number }): Json => ({
+  '@type': 'BlogPosting',
+  '@id': `${canonicalUrl(p.path)}#article`,
+  mainEntityOfPage: { '@id': `${canonicalUrl(p.path)}#webpage` },
+  headline: p.headline,
+  description: p.description,
+  image: [p.image],
+  datePublished: p.published,
+  dateModified: p.modified,
+  author: { '@id': id('organization') },
+  publisher: { '@id': id('organization') },
+  articleSection: p.category,
+  keywords: p.keywords.join(', '),
+  wordCount: p.words,
+  inLanguage: site.locale,
+  isPartOf: { '@id': `${canonicalUrl('/blog')}#blog` },
+})
+
+export const blogSchema = (p: { name: string; description: string; posts: { path: string; title: string; published: string }[] }): Json => ({
+  '@type': 'Blog',
+  '@id': `${canonicalUrl('/blog')}#blog`,
+  url: canonicalUrl('/blog'),
+  name: p.name,
+  description: p.description,
+  inLanguage: site.locale,
+  publisher: { '@id': id('organization') },
+  blogPost: p.posts.map((x) => ({ '@type': 'BlogPosting', headline: x.title, url: canonicalUrl(x.path), datePublished: x.published })),
 })
 
 export const graph = (nodes: Json[]): Json => ({ '@context': 'https://schema.org', '@graph': nodes })

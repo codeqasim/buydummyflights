@@ -1,4 +1,4 @@
-// FOOTER: BRAND, TWO LINK COLUMNS, THE HONEST DISCLAIMER, LEGAL BAR. DARK IN BOTH THEMES.
+// FOOTER: BRAND, FOUR LINK COLUMNS (EVERY PAGE IS REACHABLE FROM HERE), THE HONEST DISCLAIMER, LEGAL BAR. DARK IN BOTH THEMES.
 import { footerCols, site } from '../data/site'
 import { useI18n } from '../i18n/context'
 import { Logo } from './logo'
@@ -8,7 +8,7 @@ export const Footer = ({ year }: { year: number }) => {
   return (
     <footer class="site-footer">
       <div class="container">
-        <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div class="foot-grid">
           <div class="max-w-sm">
             <Logo class="logo-on-dark" />
             <p class="mt-4 text-sm leading-relaxed text-foot-mute">{t('footer.about')}</p>

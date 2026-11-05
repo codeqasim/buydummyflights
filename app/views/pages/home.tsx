@@ -2,6 +2,7 @@
 import { Cta } from '../sections/home/cta'
 import { Faq, type FaqItem } from '../sections/home/faq'
 import { Hero } from '../sections/home/hero'
+import { Guides } from '../sections/home/guides'
 import { How } from '../sections/home/how'
 import { Pricing } from '../sections/home/pricing'
 import { Reviews } from '../sections/home/reviews'
@@ -20,6 +21,7 @@ export const HomePage = ({ today, faq }: { today: string; faq: FaqItem[] }) => (
     <Why />
     <Uses />
     <Reviews />
+    <Guides />
     <Faq items={faq} />
     <Cta />
   </>

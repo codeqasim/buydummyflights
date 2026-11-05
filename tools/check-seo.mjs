@@ -3,10 +3,24 @@ import { loadWorker } from './lib/worker.mjs'
 
 const w = await loadWorker()
 const origin = 'https://buydummyflights.com'
-const sitemap = await (await w.fetch(`${origin}/sitemap.xml`)).text()
-const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname)
 let bad = 0
 const fail = (m) => { console.error('FAIL', m); bad++ }
+// MAIN SITEMAP + BLOG SITEMAP. THE BLOG SITEMAP MUST EXIST AND ROBOTS.TXT MUST ADVERTISE BOTH.
+const paths = []
+for (const sm of ['/sitemap.xml', '/sitemap-blog.xml']) {
+  const r = await w.fetch(origin + sm)
+  if (r.status !== 200) { fail(`${sm} HTTP ${r.status}`); continue }
+  paths.push(...[...(await r.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname))
+}
+if (new Set(paths).size !== paths.length) fail('a URL is listed in both sitemaps or twice')
+const robotsTxt = await (await w.fetch(`${origin}/robots.txt`)).text()
+for (const sm of ['/sitemap.xml', '/sitemap-blog.xml']) if (!robotsTxt.includes(`Sitemap: ${origin}${sm}`)) fail(`robots.txt missing ${sm}`)
+const POST_MIN = 1200
+const POST_MAX = 2000
+const wordsOf = (html) => {
+  const art = html.match(/<article class="prose">([\s\S]*?)<\/article>/)?.[1] ?? ''
+  return art.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/g, ' ').split(/\s+/).filter(Boolean).length
+}
 
 for (const path of paths) {
   const res = await w.fetch(origin + path)
@@ -24,7 +38,18 @@ for (const path of paths) {
   const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]))
   const types = new Set(ld.flatMap((d) => (d['@graph'] ?? [d]).map((n) => n['@type'])))
   const need = path === '/' ? ['Organization', 'WebSite', 'WebPage', 'BreadcrumbList', 'FAQPage', 'Service'] : ['Organization', 'WebSite', 'WebPage', 'BreadcrumbList']
-  for (const t of need) if (!types.has(t)) fail(`${path} missing JSON-LD ${t}`)
+  // /about AND /contact USE THE MORE SPECIFIC schema.org PAGE TYPES (AboutPage, ContactPage) INSTEAD OF WebPage.
+  for (const t of need) if (!(t === 'WebPage' ? ['WebPage', 'AboutPage', 'ContactPage'].some((x) => types.has(x)) : types.has(t))) fail(`${path} missing JSON-LD ${t}`)
+  // 3-5 INTERNAL LINKS INSIDE <main> (HEADER AND FOOTER DO NOT COUNT). "/" ITSELF IS EXEMPT BECAUSE ITS SECTIONS LINK OUT.
+  const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? ''
+  const internal = new Set([...main.matchAll(/<a\b[^>]*href="(\/[^"#?]*)/g)].map((m) => m[1]).filter((h) => h !== path))
+  if (path !== '/' && internal.size < 3) fail(`${path} has only ${internal.size} distinct internal links in <main>`)
+  if (path.startsWith('/blog/')) {
+    const words = wordsOf(html)
+    if (words < POST_MIN || words > POST_MAX) fail(`${path} has ${words} words (want ${POST_MIN}-${POST_MAX})`)
+    for (const t of ['BlogPosting']) if (!types.has(t)) fail(`${path} missing JSON-LD ${t}`)
+    if (!/<time datetime="\d{4}-\d{2}-\d{2}"/.test(html)) fail(`${path} missing visible date`)
+  }
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)].filter((m) => !/\balt=/.test(m[0]))
   if (imgs.length) fail(`${path} img without alt`)
   console.log(`ok ${path}: title ${title.length}, desc ${desc.length}, h1 ${h1}, ld ${[...types].join(',')}`)
@@ -44,6 +69,11 @@ for (const [label, url, env] of [
 }
 const www = await w.fetch('https://www.buydummyflights.com/order?x=1', { redirect: 'manual' })
 if (www.status !== 301 || www.headers.get('location') !== `${origin}/order?x=1`) fail('www redirect')
+// PAGINATION PAGE 2 EXISTS, IS CANONICAL TO ITSELF AND STAYS OUT OF THE SITEMAPS.
+const p2 = await w.fetch(`${origin}/blog/page/2`)
+const p2html = await p2.text()
+if (p2.status !== 200 || !p2html.includes(`<link rel="canonical" href="${origin}/blog/page/2"`)) fail('/blog/page/2 missing or wrong canonical')
+if (paths.includes('/blog/page/2')) fail('/blog/page/2 should not be in a sitemap')
 const nf = await w.fetch(`${origin}/nope`)
 if (nf.status !== 404) fail('404 status')
 console.log(bad ? `seo: ${bad} problem(s)` : 'seo: ok')

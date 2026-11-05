@@ -23,6 +23,14 @@ document.addEventListener('alpine:init', function () {
     return { close: function () { this.$el.removeAttribute('open'); } };
   });
 
+  // DESKTOP DROPDOWN (NATIVE <details>): CLOSE ON ESCAPE, ON A CLICK OUTSIDE, AND AFTER PICKING A LINK.
+  A.data('dropdown', function () {
+    return {
+      close: function () { this.$el.removeAttribute('open'); },
+      away: function (e) { if (!this.$el.contains(e.target)) this.$el.removeAttribute('open'); },
+    };
+  });
+
   A.data('reveal', function () {
     return { show: function () { this.$el.classList.add('is-in'); } };
   });

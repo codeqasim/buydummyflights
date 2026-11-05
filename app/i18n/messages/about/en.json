@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "About BuyDummyFlights: Flight Reservations | BuyDummyFlights",
+    "description": "BuyDummyFlights provides flight reservation documents for visa applicants. Learn what we do, what we will not do and how we write our guides."
+  },
+  "crumb": "About",
+  "h1": "About BuyDummyFlights",
+  "lead": "We provide flight reservation documents for visa applications, and we try to be straightforward about what they can and cannot do.",
+  "body": [
+    "## What we do",
+    "BuyDummyFlights prepares **flight reservation documents** for people who need to show a travel plan with a visa application, an airline check-in or a border check. You enter your trip, choose a plan and receive a PDF itinerary with a booking reference by email. The process is described on the [how it works](/how-it-works) page.",
+    "## Why it exists",
+    "Visa decisions can take weeks, and approval is never certain. Many authorities tell applicants not to buy non-refundable travel before a decision. Applicants still need to show a plan. A reservation bridges that gap without tying up money in an airfare.",
+    "## What we will not do",
+    "- We will not promise that an embassy, consulate or airline will accept a document.\n- We will not promise or imply a visa outcome.\n- We will not describe a reservation as a paid ticket.\n- We will not publish fake reviews or invented statistics.\n- We will not encourage anyone to edit a document or mislead an authority.",
+    "## How we write our guides",
+    "Our [blog](/blog) explains visa paperwork in plain language. When we mention official guidance, we describe it generally and tell you to check the current official page, because rules change and differ by country and office. We avoid unverified numbers and we say clearly when something depends on the authority you are applying to.",
+    "Blog articles are published under the organisation name, not an individual. Each article shows when it was published and last updated.",
+    "## Your data",
+    "We ask only for what the itinerary needs: passenger names, trip details and an email address. The [privacy policy](/privacy) describes this in more detail.",
+    "## Get in touch",
+    "Questions about a name, date or format? Visit the [contact page](/contact). For common questions, see the [FAQ](/faq)."
+  ]
+}

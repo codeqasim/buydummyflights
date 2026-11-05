@@ -14,6 +14,7 @@ export type I18n = {
   t: (key: string, vars?: Vars) => string
   rich: (key: string, tokens: Record<string, Child>) => Child[]
   list: (key: string) => string[]
+  data: <T = unknown>(key: string) => T
   has: (key: string) => boolean
   href: (path: string) => string
 }
@@ -44,5 +45,11 @@ export function createI18n(ns: string, locale: Locale = defaultLocale): I18n {
     if (!Array.isArray(v)) throw new Error(`i18n: missing list "${key}" in "${ns}"`)
     return v as string[]
   }
-  return { locale, ns, t, rich, list, has: (k) => raw(k) !== undefined, href: (p) => localizePath(p, locale) }
+  // data(): STRUCTURED CONTENT (BLOCK ARRAYS, FAQ ITEMS) THAT IS STILL WORDS, SO IT LIVES IN THE MESSAGE FILES TOO.
+  const data = <T,>(key: string): T => {
+    const v = raw(key)
+    if (v === undefined) throw new Error(`i18n: missing data "${key}" in "${ns}"`)
+    return v as T
+  }
+  return { locale, ns, t, rich, list, data, has: (k) => raw(k) !== undefined, href: (p) => localizePath(p, locale) }
 }

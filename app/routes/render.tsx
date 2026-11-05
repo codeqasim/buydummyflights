@@ -26,12 +26,13 @@ export function renderDocument(c: Context<AppEnv>, o: { i18n: I18n; meta: HeadMe
   return c.html(html, o.status ?? 200)
 }
 
-export function renderPage(c: Context<AppEnv>, o: { record: PageRecord; body: (i18n: I18n) => Child; crumbs: Crumb[]; schema?: Schema[] }): Response {
+// meta OVERRIDES THE NAMESPACE title/description (BLOG: PER-ARTICLE TEXT THAT LIVES IN app/content, NOT IN A MESSAGE FILE).
+export function renderPage(c: Context<AppEnv>, o: { record: PageRecord; body: (i18n: I18n) => Child; crumbs: Crumb[]; schema?: Schema[]; meta?: { title: string; description: string; ogType?: 'article' } }): Response {
   const i18n = i18nFor(o.record.ns)
   const host = new URL(c.req.url).host
   const indexable = isIndexable(c.env, host) && o.record.index
-  const title = i18n.t('meta.title')
-  const description = i18n.t('meta.description')
+  const title = o.meta?.title ?? i18n.t('meta.title')
+  const description = o.meta?.description ?? i18n.t('meta.description')
   const image = `${site.origin}/assets/images/og-image.png`
   const meta: HeadMeta = {
     title,
@@ -40,10 +41,11 @@ export function renderPage(c: Context<AppEnv>, o: { record: PageRecord; body: (i
     robots: indexable ? ROBOTS_INDEX : o.record.index ? 'noindex, nofollow' : 'noindex, follow',
     ogImageAlt: i18n.t('brand.tagline'),
     ogImage: image,
+    ogType: o.meta?.ogType,
     schema: [
       organizationSchema(i18n.t('footer.about')),
       websiteSchema(i18n.t('footer.about')),
-      webPageSchema({ path: o.record.canonicalPath, title, description, image, modified: o.record.lastModified }),
+      webPageSchema({ path: o.record.canonicalPath, title, description, image, modified: o.record.lastModified, type: o.record.schemaType }),
       breadcrumbSchema(o.record.canonicalPath, o.crumbs),
       ...(o.schema ?? []),
     ],

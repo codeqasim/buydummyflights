@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Return Ticket Reservation for Visa | BuyDummyFlights",
+    "description": "A return flight reservation with outbound and return flights, booking reference and PDF delivery. Show your entry and exit dates for a visa."
+  },
+  "crumb": "Return ticket",
+  "h1": "Return flight reservation",
+  "lead": "An outbound and return itinerary that matches the dates on your visa application form.",
+  "body": [
+    "## What a return reservation is",
+    "A return reservation is an itinerary with two flights: one leaving your home country and one bringing you back, each with its own details and a booking reference. It records your planned travel dates. It is not a paid ticket and you cannot fly on it.",
+    "Many visa applications ask for entry and exit dates. A return itinerary lets you show both on one page. If your forms ask for dates, a reservation keeps every document consistent. See [dummy ticket vs real flight booking](/blog/dummy-ticket-vs-real-flight-booking) to decide which fits you.",
+    "## What you receive",
+    "- Outbound and return flights with a booking reference (PNR)\n- Your name as on the passport\n- Route, dates and flight numbers\n- A PDF delivered by email",
+    "The [sample ticket](/sample-ticket) shows the layout.",
+    "## Choosing dates",
+    "1. Departure should match the arrival date on your application form.\n2. Return should be inside the stay you request.\n3. Leave a sensible margin in case of small changes.\n4. Check that hotel, insurance and leave dates cover the same period.",
+    "## Return, onward or multi-city?",
+    "A return itinerary is common for visitor visas. If you only need a flight out of a country, see [onward ticket](/onward-ticket). If you have several stops, a multi-city plan fits better. Prices are on the [pricing page](/pricing).",
+    "## For which visas?",
+    "Return itineraries are commonly attached to Schengen applications. See the [Schengen visa page](/dummy-ticket-for-schengen-visa) for how to line up your dates.",
+    "> A reservation does not guarantee a visa. We cannot promise any embassy will accept it.",
+    "## Using it honestly",
+    "Describe the document as a reservation. Never edit it. If your plans change, order a new one.",
+    "## When a return reservation is a good fit",
+    "It suits visitor visa applications that ask for entry and exit dates, family visits where a host asks for the plan, and events with a fixed schedule. It is less suitable when an authority asks specifically for a paid ticket, or when your plans are open-ended and you do not know when you will return.",
+    "## Checking your document",
+    "When the PDF arrives, compare each name with the passport photo page, each date with your application form, and the route with what you asked for. If anything is wrong, contact support with your order reference. Do not change the PDF yourself.",
+    "## If your visa takes longer",
+    "A reservation has a validity window shown at checkout. If your decision takes longer than that window, order a new reservation with updated dates. Our [FAQ](/faq) answers other common questions.",
+    "Q: Can I use a return reservation to fly?\nA: No. When your visa is approved, buy your real flight.",
+    "Q: What if my return date changes?\nA: Contact support with your order reference or order a new reservation with the new date."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Visa Travel Guides and Dummy Ticket Blog | BuyDummyFlights",
+    "titlePage": "Visa Travel Guides, Page {n} | BuyDummyFlights",
+    "description": "Plain-English guides on flight reservations, onward tickets and visa itineraries for Schengen, US, UK and Canada applications."
+  },
+  "crumb": "Blog",
+  "crumbPage": "Page {n}",
+  "h1": "Visa travel guides",
+  "h1Page": "Visa travel guides, page {n}",
+  "lead": "Plain-English articles on flight reservations, itineraries and visa paperwork. We cite official guidance only in general terms, so always check the current official page.",
+  "post": {
+    "minRead": "{n} min read",
+    "by": "By",
+    "author": "BuyDummyFlights team",
+    "updated": "Updated",
+    "services": "Related services",
+    "more": "More guides"
+  },
+  "pager": {
+    "label": "Blog pages",
+    "prev": "Newer articles",
+    "next": "Older articles",
+    "count": "Page {page} of {pages}"
+  },
+  "list": "All articles"
+}

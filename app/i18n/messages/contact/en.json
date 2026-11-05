@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Contact BuyDummyFlights Support | BuyDummyFlights",
+    "description": "Contact BuyDummyFlights about an order, a name or date correction, or a question before you buy. Include your order reference for faster help."
+  },
+  "crumb": "Contact",
+  "h1": "Contact us",
+  "lead": "Questions about a name, a date or an order? Send us a message and we will reply by email.",
+  "form": {
+    "title": "Send a message",
+    "name": "Your name",
+    "email": "Your email",
+    "ref": "Order reference (optional)",
+    "message": "Your message",
+    "submit": "Send message",
+    "sent": "Thank you. Your message was received.",
+    "error": "Please fill in your name, a valid email and a message, then try again.",
+    "mockNotice": "This form is a preview and does not send messages yet. Please check back shortly."
+  },
+  "body": [
+    "## Before you write",
+    "Many questions have a quick answer on our [FAQ page](/faq). For the order process, see [how it works](/how-it-works). If your question is about the price, see [pricing](/pricing).",
+    "## What to include",
+    "- Your **order reference**, if you already ordered.\n- The **name and dates** you are asking about, spelled as on the passport.\n- A short description of what you need.",
+    "Do not send passport numbers, card numbers or other sensitive details in a message. We do not need them to answer a question.",
+    "## What we can help with",
+    "- Correcting a name or date on an itinerary\n- Questions about which plan fits your application\n- Delivery problems with an itinerary email\n- Refund requests, handled as described in the [refund policy](/refund-policy)",
+    "## What we cannot do",
+    "We cannot tell you whether a specific embassy will accept a document, and we cannot influence a visa decision. For those questions, contact the embassy or visa centre directly.",
+    "## Replies",
+    "We reply by email, so check your spam folder if you do not see an answer.",
+    "## Other ways to get help",
+    "If you are about to apply, the [visa application checklist](/blog/visa-application-checklist) can help you prepare your documents. If your question is about whether a reservation is right for you, [dummy ticket vs real flight booking](/blog/dummy-ticket-vs-real-flight-booking) compares the options."
+  ]
+}

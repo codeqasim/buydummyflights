@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Refund Policy | BuyDummyFlights",
+    "description": "Draft refund policy for BuyDummyFlights: where to find refund terms, how to request a correction or a refund, and what to include."
+  },
+  "crumb": "Refund policy",
+  "h1": "Refund policy",
+  "lead": "Refund terms are shown at checkout before you pay. This page explains how requests are handled.",
+  "body": [
+    "## About this policy",
+    "This is a draft that has not yet been reviewed by a lawyer, and the final wording may change. The terms shown at checkout when you order are the ones that apply to your order.",
+    "## What you are paying for",
+    "You pay for a flight reservation document, not an airfare. See [pricing](/pricing) for the plans. Because the document is prepared for your trip, the refund terms are read together with the delivery of that document.",
+    "## Corrections first",
+    "If a name, date or route on your itinerary is wrong, contact us with your order reference. A correction is often the fastest way to fix the problem. Do not edit the PDF yourself.",
+    "## Requesting a refund",
+    "1. Open the [contact page](/contact).\n2. Include your order reference and the email used for the order.\n3. Explain briefly why you are asking.",
+    "We will reply by email with the outcome.",
+    "## What we cannot refund for",
+    "An embassy, consulate, airline or authority may decide not to accept a document. We do not control those decisions and cannot promise acceptance. The [terms of service](/terms) set this out. Whether a refund applies in that case depends on the terms shown at checkout.",
+    "## Delivery problems",
+    "If your itinerary does not arrive, check your spam folder and then contact us. We will resend it.",
+    "## Related pages",
+    "Read the [FAQ](/faq) for common questions, or [how it works](/how-it-works) for the order steps."
+  ]
+}

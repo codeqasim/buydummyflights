@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Dummy Ticket FAQ: Legal, Validity, Refunds | BuyDummyFlights",
+    "description": "Answers to common questions about flight reservations for visas: legality, validity, embassies, names, dates, delivery, refunds and support."
+  },
+  "crumb": "FAQ",
+  "h1": "Frequently asked questions",
+  "lead": "Straight answers about flight reservations for visa applications, including what they cannot do.",
+  "body": [
+    "## The basics",
+    "Q: What is a flight reservation for a visa application?\nA: It is an itinerary with a booking reference (PNR) that shows a planned journey. It is a document for showing a travel plan. It is not a paid ticket and you cannot board a plane with it. See [what is a dummy ticket](/blog/what-is-a-dummy-ticket).",
+    "Q: Is it the same as a dummy ticket?\nA: People use both phrases for the same kind of document. We prefer \"flight reservation\" because it describes what it is.",
+    "Q: Do I pay for the flight?\nA: No. You pay for the reservation document only. You never pay for the airfare.",
+    "## Legality and acceptance",
+    "Q: Is it legal to use one for a visa application?\nA: Using an itinerary to show a planned trip is common. What matters is honesty: do not present a reservation as a paid ticket, and never edit a document. Read [is a dummy ticket legal for a visa](/blog/is-a-dummy-ticket-legal-for-a-visa).",
+    "Q: Will my embassy accept it?\nA: We cannot promise that. Every embassy, consulate and visa centre sets its own rules, and some ask for a paid or refundable ticket. Check the official requirements for your application.",
+    "Q: Does a reservation guarantee a visa?\nA: No. Visa decisions rest on the whole application: purpose, funds, ties to home and consistency.",
+    "## Validity and verification",
+    "Q: How long is the reservation valid?\nA: The validity window is shown at checkout before you pay. If your decision takes longer, you can order a new reservation.",
+    "Q: Can the booking reference be checked?\nA: Each itinerary carries a booking reference and flight details. What an airline or officer can see depends on how they look it up. Our guide on [verifying a reservation and PNR](/blog/how-to-verify-a-flight-reservation-pnr) explains the limits.",
+    "## Ordering and delivery",
+    "Q: How do I order?\nA: Enter your trip, choose a plan, pay at checkout and receive the PDF by email. The full process is on the [how it works](/how-it-works) page.",
+    "Q: How fast do I receive it?\nA: Your itinerary is sent by email after your order is confirmed. The delivery time is shown at checkout.",
+    "Q: Do I need an account?\nA: No account is needed.",
+    "Q: How do I pay?\nA: Payment options are shown at checkout. See [pricing](/pricing) for the plans.",
+    "## Names, dates and changes",
+    "Q: What name should I enter?\nA: Enter the name exactly as it appears on the passport, in the same order.",
+    "Q: Can I change names or dates after ordering?\nA: Contact support with your order reference. If your plans change, you may need a new reservation.",
+    "Q: Should I edit the PDF if a detail is wrong?\nA: No. Contact support so we can correct it. An edited document can seriously harm an application.",
+    "## Refunds and support",
+    "Q: Can I get a refund?\nA: Refund terms are shown at checkout before you pay. The [refund policy](/refund-policy) page explains how requests are handled.",
+    "Q: How do I reach support?\nA: Use the [contact page](/contact). We reply by email.",
+    "## Which service do I need?",
+    "Q: Which page is right for my visa?\nA: Start with the page for your destination: [Schengen](/dummy-ticket-for-schengen-visa), [US](/dummy-ticket-for-us-visa), [UK](/dummy-ticket-for-uk-visa) or [Canada](/dummy-ticket-for-canada-visa). For airlines or border checks, see [onward ticket](/onward-ticket)."
+  ]
+}

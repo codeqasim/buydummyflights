@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "How It Works: Flight Reservation Steps | BuyDummyFlights",
+    "description": "See how a flight reservation for your visa works: enter your trip, choose a plan, receive a PDF itinerary with a booking reference by email."
+  },
+  "crumb": "How it works",
+  "h1": "How a flight reservation for your visa works",
+  "lead": "Three steps, no account and no airline ticket purchase. Here is exactly what happens from your first click to the PDF in your inbox.",
+  "body": [
+    "## What you are ordering",
+    "You are ordering a **flight reservation document**: an itinerary with your name, your route, flight details and a booking reference (PNR). You pay for the document. You do not pay for an airfare, and the reservation is not a ticket you can fly on.",
+    "People use a reservation to show a travel plan when an application, an airline or a border officer asks for one. It lets you keep your money until your visa is approved, then book the real flight. If you are not sure whether you need a reservation or a paid ticket, read [dummy ticket vs real flight booking](/blog/dummy-ticket-vs-real-flight-booking) first.",
+    "## Step 1: enter your trip",
+    "Use the form on the [home page](/) to add where you are flying from and to, your dates and the number of travellers. Choose dates that match your visa application form. If your dates are not final, wait until they are, because every document in your file should agree.",
+    "## Step 2: choose a plan and pay",
+    "Pick a plan on the order page: one-way, return or multi-city. Then confirm each passenger's name **exactly as it appears on the passport**, including the order of given names and surnames. A name that differs from the passport is the most common reason an itinerary has to be reissued. See [pricing](/pricing) for what each plan includes.",
+    "## Step 3: receive your itinerary",
+    "After your order is confirmed, your flight reservation arrives by email as a PDF. It is ready to attach to your application or to show when asked. Check the names, dates and route as soon as it arrives. If something is wrong, contact support with your order reference and we will help.",
+    "## What the PDF shows",
+    "- Passenger name as on the passport\n- Route, dates and flight numbers\n- Booking reference (PNR)\n- Reservation status",
+    "You can see an illustration on the [sample ticket page](/sample-ticket). The sample uses example names and flights only.",
+    "## How long the reservation is valid",
+    "A reservation is not a paid ticket, so it is not held indefinitely. The validity window for your plan is shown at checkout before you pay. If your visa decision takes longer than that window, you can order a new reservation with updated dates. Do not edit the PDF yourself: an altered document can be far more damaging to an application than an expired one.",
+    "## What it does not do",
+    "> A reservation is a travel plan on paper. It does not guarantee a visa, and we cannot promise that any embassy, consulate or airline will accept it.",
+    "Every authority sets its own rules. Some accept a reservation, some ask for a paid or refundable ticket, and some do not ask for flights at all. Always check the exact documents your embassy or visa centre asks for. Our guide to [whether a dummy ticket is legal for a visa](/blog/is-a-dummy-ticket-legal-for-a-visa) explains how to use a reservation honestly.",
+    "## Before you order, check",
+    "1. Your passport name and its spelling.\n2. Your travel dates against your application form.\n3. The type of itinerary you need: onward, return or multi-city.\n4. The validity window shown at checkout.",
+    "## Common questions",
+    "Q: Do I need to create an account?\nA: No. You enter your trip, choose a plan, pay at checkout and receive your itinerary by email.",
+    "Q: Do I pay for the flight?\nA: No. You pay for the reservation document only. You never pay for the airfare.",
+    "Q: Can I use the reservation to fly?\nA: No. It is a document for showing a travel plan. When your visa is approved, book your real flight with an airline or agent.",
+    "Q: What if my dates change?\nA: Contact support with your order reference, or order a new reservation with the new dates.",
+    "More answers are on the [FAQ page](/faq)."
+  ]
+}

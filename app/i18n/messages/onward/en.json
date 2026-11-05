@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Onward Ticket: Proof of Onward Travel | BuyDummyFlights",
+    "description": "A one-way flight reservation as proof of onward travel for airlines and border checks. PDF itinerary with booking reference. No airfare to pay."
+  },
+  "crumb": "Onward ticket",
+  "h1": "Onward ticket reservation",
+  "lead": "A one-way itinerary showing a planned flight out of the country you are entering.",
+  "body": [
+    "## What proof of onward travel means",
+    "Some airlines ask passengers to show that they plan to leave the country they are flying to, and some border officers ask the same question on arrival. The rule depends on the destination, the airline and the traveller's passport, and it is the airline or border authority that decides what it will accept. Our guide to [onward tickets and proof of onward travel](/blog/onward-ticket-proof-of-onward-travel) explains the background.",
+    "## What you receive",
+    "- A one-way flight reservation with a booking reference (PNR)\n- Your name as on the passport\n- Route, date and flight number\n- A PDF itinerary by email",
+    "See the [sample ticket](/sample-ticket) for the layout.",
+    "## When it fits",
+    "- You are flying on a one-way ticket and expect to be asked about onward travel.\n- You plan to leave overland or by another route later, and want to show a plan for now.\n- You want to avoid buying a non-refundable ticket that you may not use.",
+    "## When it may not be enough",
+    "Some airlines and authorities want a paid ticket or a specific type of onward travel. If you have been told that a paid ticket is required, a refundable fare is safer. Read [airline hold and fare-lock options](/blog/airline-hold-booking-options) to compare alternatives.",
+    "> A reservation is not a ticket and cannot be used to fly. We cannot promise that an airline or border officer will accept it.",
+    "## Choosing the date",
+    "Pick a date that fits the length of stay allowed for your passport at the destination. Check the official entry rules. If you are not sure, ask the airline or the embassy before you travel.",
+    "## Return itinerary instead?",
+    "If your application or airline asks for outbound and return flights, see the [return ticket page](/return-ticket). For visa applications, the [Schengen visa page](/dummy-ticket-for-schengen-visa) explains how to match dates to your form. See [pricing](/pricing).",
+    "## Why airlines ask",
+    "Airlines can be fined or required to carry a passenger back if a traveller is refused entry, so some check onward travel before boarding. That is a business and legal risk for the airline, and the rules they apply differ. Check-in staff usually look for evidence that you plan to leave, such as a flight out, though what they accept varies.",
+    "## Practical tips",
+    "- Check the official entry rules for your destination and passport before you fly.\n- Carry the PDF on your phone and a printed copy.\n- Make sure the name matches the passport exactly.\n- Keep your visa or permit documents together with the itinerary.\n- If you are told a paid ticket is required, ask what exactly is accepted.",
+    "## What to avoid",
+    "Do not edit the PDF, and do not describe the reservation as a purchased ticket. If an agent asks whether it is paid, answer truthfully. Our article on [whether a dummy ticket is legal for a visa](/blog/is-a-dummy-ticket-legal-for-a-visa) explains where the line is.",
+    "Q: Is an onward ticket the same as a return ticket?\nA: No. An onward ticket is a flight out of the country you are entering, to any destination. A return ticket returns you to where you started.",
+    "Q: Can an airline refuse a reservation?\nA: Yes. Each airline and authority sets its own rules and we cannot promise acceptance."
+  ]
+}

@@ -3,17 +3,18 @@ import { Hono } from 'hono'
 import { home, plans } from '../data/site'
 import { pageByPath, pages } from '../data/pages'
 import type { AppEnv } from '../env'
-import type { I18n } from '../i18n/t'
 import { robotsTxt } from '../seo/robots'
-import { faqSchema, serviceSchema, type Crumb } from '../seo/schema'
-import { sitemapXml } from '../seo/sitemap'
+import { faqSchema, serviceSchema } from '../seo/schema'
+import { blogSitemapXml, sitemapXml } from '../seo/sitemap'
 import { site } from '../data/site'
 import { isIndexable } from '../utils/urls'
 import { iconSprite } from '../views/icons'
 import { HomePage } from '../views/pages/home'
 import { NotFoundPage } from '../views/pages/not-found'
 import { OrderPage } from '../views/pages/order'
+import { postContact } from './contact-api'
 import { postOrder } from './order-api'
+import { contentViews, crumbsFor, type PageView } from './page-views'
 import { i18nFor, renderDocument, renderPage } from './render'
 import { securityHeaders } from './security'
 
@@ -41,13 +42,8 @@ app.use('*', async (c, next) => {
   await next()
 })
 
-const crumbsFor = (i18n: I18n, path: string, nameKey?: string): Crumb[] => {
-  const homeCrumb: Crumb = { name: i18n.t('breadcrumb.home'), path: '/' }
-  return path === '/' || !nameKey ? [homeCrumb] : [homeCrumb, { name: i18n.t(nameKey), path }]
-}
-
-type PageView = { handler: (c: Parameters<typeof renderPage>[0]) => Response }
 const PAGE_VIEWS: Record<string, PageView> = {
+  ...contentViews(),
   '/': {
     handler: (c) => {
       const record = pageByPath('/')!
@@ -90,9 +86,11 @@ for (const record of pages) {
 }
 
 app.post('/api/order', postOrder)
+app.post('/api/contact', postContact)
 app.all('/api/*', (c) => c.json({ ok: false, error: 'not_found' }, 404))
 
 app.get('/sitemap.xml', (c) => c.body(sitemapXml(), 200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }))
+app.get('/sitemap-blog.xml', (c) => c.body(blogSitemapXml(), 200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }))
 app.get('/robots.txt', (c) =>
   c.body(robotsTxt(isIndexable(c.env, new URL(c.req.url).host)), 200, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }),
 )

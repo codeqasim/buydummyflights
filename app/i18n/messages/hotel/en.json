@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Hotel Reservation for Visa Applications | BuyDummyFlights",
+    "description": "Visa files often need accommodation proof as well as flights. See what BuyDummyFlights covers today and how to match hotel dates to your itinerary."
+  },
+  "crumb": "Hotel reservation",
+  "h1": "Hotel reservation for a visa application",
+  "lead": "Accommodation proof and flights should tell the same story. Here is what we cover and how to line the two up.",
+  "body": [
+    "## Our scope today",
+    "BuyDummyFlights currently provides **flight reservations only**. We do not sell hotel reservations at this time. This page explains how accommodation evidence fits into a visa file so you can plan it alongside your itinerary.",
+    "## Why accommodation matters",
+    "Many visa checklists ask for proof of where you will stay: a hotel booking that covers each night, or an invitation letter from a host with their address and contact details. Dates on that proof should match your itinerary and your application form. See our [visa application checklist](/blog/visa-application-checklist) for the full list.",
+    "## Matching hotel and flight dates",
+    "- Check-in should be on or just after your arrival date.\n- Check-out should be on or before your departure date.\n- Avoid gaps in the stay unless you can explain them.\n- If you will stay with a host for part of the trip, include their invitation.",
+    "## Where to get accommodation proof",
+    "- A hotel or booking platform booking with free cancellation, if you want to avoid paying in advance.\n- A letter from a host, following the format your embassy asks for.",
+    "Always read the cancellation terms and keep the confirmation emails. Check the official checklist for what the embassy accepts.",
+    "## Get the flight document first",
+    "A flight reservation fixes your arrival and departure dates, which makes booking accommodation easier. See [how it works](/how-it-works) or the [Schengen visa page](/dummy-ticket-for-schengen-visa) for an example of matching dates. The [FAQ](/faq) answers common questions.",
+    "> We cannot promise that any document will be accepted. Always follow the official requirements for your application.",
+    "## Common accommodation mistakes",
+    "- Hotel dates that leave unexplained gaps in the stay\n- Booking names that do not match the passport\n- Cancellation terms that expire before the visa decision\n- Mixing up booking references between different documents\n- Relying on a flight document to show where you will stay",
+    "## A simple order of work",
+    "Decide your dates, get your flight document, then arrange accommodation that fits the same dates, then check the whole file for consistency. Our [visa application checklist](/blog/visa-application-checklist) has a step-by-step version.",
+    "Q: Do you provide hotel reservations?\nA: Not currently. We provide flight reservations only.",
+    "Q: Do I need accommodation proof for every visa?\nA: No. Check the official checklist for yours."
+  ]
+}

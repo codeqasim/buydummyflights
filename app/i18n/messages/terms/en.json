@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Terms of Service | BuyDummyFlights",
+    "description": "Draft terms of service for BuyDummyFlights flight reservation documents: what the service is, what it is not, your responsibilities and limits."
+  },
+  "crumb": "Terms of service",
+  "h1": "Terms of service",
+  "lead": "What you are buying, what we are responsible for and what stays with you.",
+  "body": [
+    "## About these terms",
+    "These terms describe how the BuyDummyFlights service works. By placing an order you confirm that you have read them. This is a draft that has not yet been reviewed by a lawyer, and the final wording may change.",
+    "## The service",
+    "We prepare flight reservation documents: itineraries with a booking reference (PNR), delivered as a PDF by email. A reservation is a document that records a planned journey. It is **not a paid ticket**, it cannot be used to board an aircraft and it does not give you any right to travel.",
+    "## What we do not promise",
+    "- We do not guarantee that any embassy, consulate, visa centre, airline or border authority will accept a document.\n- We do not guarantee, or influence, a visa decision.\n- We do not guarantee that a reservation will remain active for any period other than the validity window shown at checkout.",
+    "## Your responsibilities",
+    "- Provide accurate information, including passenger names exactly as on the passport.\n- Check the itinerary when you receive it and tell us promptly if something is wrong.\n- Use the document honestly. Do not present a reservation as a paid ticket, and do not alter it.\n- Check the requirements of the authority you are applying to. You decide whether a reservation is appropriate.\n- Follow the laws that apply to you and to your application.",
+    "## Orders and prices",
+    "The price, the validity window and the refund terms are shown at checkout before you pay. By confirming an order you accept them. See [pricing](/pricing) and the [refund policy](/refund-policy).",
+    "## Delivery",
+    "Your itinerary is sent to the email address you provide. You are responsible for entering it correctly and for checking spam folders. If you do not receive it, contact us through the [contact page](/contact).",
+    "## Misuse",
+    "We may refuse or cancel an order that we reasonably believe is intended to deceive an authority or break the law.",
+    "## Limits of liability",
+    "To the extent allowed by law, we are not liable for decisions made by embassies, consulates, airlines or authorities, or for losses that result from them. Nothing in these terms limits liability that cannot be limited by law.",
+    "## Changes to these terms",
+    "We may update these terms. The version that applies is the one shown when you place your order.",
+    "## Contact",
+    "Questions? See the [contact page](/contact) or the [FAQ](/faq). Our [privacy policy](/privacy) explains how we handle your data."
+  ]
+}

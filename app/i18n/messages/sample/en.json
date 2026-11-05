@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Sample Dummy Ticket Itinerary | BuyDummyFlights",
+    "description": "See a sample flight reservation PDF: passenger name, route, dates, flight numbers and booking reference. Example data only, for illustration."
+  },
+  "crumb": "Sample ticket",
+  "h1": "Sample flight reservation",
+  "lead": "An illustration of the itinerary you receive by email. The names, flights and booking reference below are examples only.",
+  "body": [
+    "## What the sample shows",
+    "The sample above is a simplified view of a flight reservation. Your own PDF contains your details, but the layout follows the same idea: one clear page with the information an officer or airline agent looks for.",
+    "## Parts of your itinerary",
+    "- **Passenger name.** It matches the passport exactly, in the same order of names.\n- **Booking reference (PNR).** A short code that identifies the reservation. Our article on [how to verify a flight reservation and PNR](/blog/how-to-verify-a-flight-reservation-pnr) explains what the reference is and what checking it can and cannot tell you.\n- **Route and dates.** Departure and arrival cities, with dates and times.\n- **Flight numbers.** Each flight leg is listed with its own number.\n- **Status.** The reservation status as shown on the document.",
+    "## What the sample does not show",
+    "The sample uses made-up details. The name, flight number, dates and reference are examples. Do not copy details from the sample into an application, because they are not a real booking.",
+    "## How to check your own itinerary",
+    "When your PDF arrives:",
+    "1. Compare each name with the passport photo page.\n2. Check each date against your application form.\n3. Check that the route is the one you asked for.\n4. Save the PDF without editing or re-saving it from another program.\n5. Keep the booking reference in a safe place in case support needs it.",
+    "If anything looks wrong, contact support with your order reference. Never change a PDF yourself.",
+    "## Reservation, not a ticket",
+    "A reservation records a planned journey. A ticket is a paid travel document you can use to board an aircraft. The sample is a reservation. To understand the difference and when each fits, see [what is a dummy ticket](/blog/what-is-a-dummy-ticket).",
+    "## Why the layout is kept simple",
+    "Officers, check-in agents and visa centre staff read many documents. A clean page with the passenger name, the route, the dates and the reference is easier to read than a crowded one. Our itineraries are designed to be clear on screen and on paper, and they are delivered as a PDF so the layout stays the same on any device.",
+    "## Ready to order?",
+    "See [pricing](/pricing) for the plans, or read [how it works](/how-it-works) for the full process. If you have a question first, the [FAQ](/faq) covers the common ones.",
+    "Q: Is the sample a real booking?\nA: No. It is an illustration with example data.",
+    "Q: Will my itinerary look exactly like this?\nA: It follows the same structure, with your own names, route, dates and booking reference."
+  ]
+}

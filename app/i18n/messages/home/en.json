@@ -232,5 +232,11 @@
   },
   "service": {
     "name": "Dummy flight reservations for visa applications"
+  },
+  "guides": {
+    "eyebrow": "Guides",
+    "title": "Visa travel guides",
+    "lead": "Plain-English articles on itineraries, onward tickets and visa paperwork.",
+    "all": "Read all guides"
   }
 }
