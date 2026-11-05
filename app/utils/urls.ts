@@ -11,7 +11,7 @@ export const isPreviewHost = (host: string): boolean => {
 }
 
 // A PAGE MAY BE INDEXED ONLY ON THE PRODUCTION HOST, IN THE PRODUCTION ENVIRONMENT, AND AFTER THE OWNER'S LAUNCH SWITCH.
-// TODO(owner): SET INDEXING TO "on" IN wrangler.jsonc WHEN PRICES ARE CONFIRMED AND THE ORDER FLOW IS REAL.
+// THE OWNER SWITCHED INDEXING TO "on" IN wrangler.jsonc FOR PRODUCTION ONLY; THE PREVIEW ENV STAYS "off" AND workers.dev IS ALWAYS noindex.
 export const isIndexable = (env: Pick<Bindings, 'ENVIRONMENT' | 'INDEXING'>, host: string): boolean =>
   env.ENVIRONMENT === 'production' && env.INDEXING === 'on' && !isPreviewHost(host)
 

@@ -1,7 +1,7 @@
 # Buy Dummy Flights — buydummyflights.com on Hono + Cloudflare Workers
 
-**Status:** multi-page site built: home, `/order`, 16 content pages and an 11-article blog (r3). The live domain stays **noindex** until the owner flips the launch gate
-(§8). Prices and the order flow are placeholders. **Last revision:** 2026-11-05 (r3).
+**Status:** multi-page site built: home, `/order`, 16 content pages and an 11-article blog (r3). Production is **indexable** since the owner approved the Google launch (§8); the
+preview stays noindex. Prices and the order flow are still placeholders. **Last revision:** 2026-11-05 (r4).
 
 This file is the single source of truth for the project, written for a human developer and an AI coding agent alike.
 Update it in the same change that alters what it describes, and add a dated line to the revision history. Do not
@@ -21,7 +21,7 @@ A page is finished only when all seven checks pass. Report each result.
    `Service` on service pages); Lighthouse SEO 100 in production (preview is noindex by design).
 5. **Design system:** Tailwind + shared components (§7); one accent colour; images only where they carry information.
 6. **Internal links:** 3–5 related pages linked; linked from nav or footer; `npm run links` reports no dangling link.
-7. **In the sitemap:** registry record in `app/data/pages.ts` has `index: true` and appears in `/sitemap.xml`.
+7. **In the sitemap:** registry record in `app/data/pages.ts` has `index: true` and appears in `/sitemap-pages.xml` (or `/sitemap-blog.xml` for articles).
 
 ---
 
@@ -97,7 +97,8 @@ app/
                               schengen, usvisa, ukvisa, canada, onward, returnflight, hotel, terms, privacy, refund, blog
   seo/head.tsx                meta, canonical, hreflang, OG, Twitter, favicons, preloads
   seo/schema.ts               JSON-LD: Organization, WebSite, WebPage, FAQPage, BreadcrumbList, Service
-  seo/sitemap.ts, robots.ts   /sitemap.xml (pages, from the registry), /sitemap-blog.xml (articles), /robots.txt (lists both)
+  seo/sitemap.ts, robots.ts   /sitemap.xml (INDEX), /sitemap-pages.xml, /sitemap-blog.xml (from the registry), /robots.txt (lists the index)
+  seo/sitemap-xsl.ts          /sitemap.xsl: browser view of the sitemaps (styles in public/sitemap.css)
   utils/                      urls.ts, alpine.ts, inline.ts
   views/layout.tsx, header.tsx, footer.tsx, logo.tsx, icons.tsx, ui.tsx, page-head.tsx
   views/partials/             flight-form, ticket
@@ -137,12 +138,17 @@ Layering rule: `data/` knows nothing about HTTP; `routes/` reads the request and
 - **Preview safety:** localhost and `*.workers.dev` are always noindex (`Disallow: /`, `X-Robots-Tag`, meta).
 - **Headings:** one `<h1>`; sections `<h2>`; cards `<h3>`.
 - **Security headers:** CSP, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`; HSTS in production only.
-- **Pages:** 17 indexable pages in `/sitemap.xml` plus `/blog`; 11 articles in `/sitemap-blog.xml`; `/blog/page/N` is self-canonical and not in a sitemap.
+- **Sitemaps:** `/sitemap.xml` is a sitemap **index** pointing to `/sitemap-pages.xml` (17 pages) and `/sitemap-blog.xml` (`/blog` + 11 articles). Each URL has a real
+  `<lastmod>` (registry date) and an `<image:image>` for the OG image; `changefreq`/`priority` are not emitted (Google ignores them). `<?xml-stylesheet?>` +
+  `/sitemap.xsl` + `/sitemap.css` give a branded table in the browser (URL counts, lastmod, images). Only the sitemap documents get a CSP that allows inline
+  style/script, because Chrome injects an inline-styled "XSLT is being removed" banner; HTML pages keep the strict CSP. If a browser drops XSLT the page falls back
+  to plain XML; crawlers are unaffected.
+- **Pages:** 17 indexable pages plus `/blog`; 11 articles; `/blog/page/N` is self-canonical and not in a sitemap.
   Articles emit `BlogPosting` + `BreadcrumbList` + `FAQPage` (when they have Q/A) with a visible `<time datetime>`; the author is the organisation.
 - **Checks (`npm run check`):** `check-links` crawls both sitemaps and the pager (broken links, duplicate ids, broken #anchors, contact and order API behaviour);
   `check-seo` enforces title ≤60 and description ≤155, one h1, canonical, the JSON-LD types, ≥3 distinct internal links in `<main>`, 1200–2000 words per article,
   both sitemaps and robots, no duplicate URLs, and the preview noindex safety rules.
-- **Search Console:** domain property verified via Cloudflare DNS TXT; `/sitemap.xml` submitted.
+- **Search Console:** the domain property must be added and verified, then submit `https://buydummyflights.com/sitemap.xml` (the index). `TODO(owner)`.
 
 ---
 
@@ -160,7 +166,7 @@ Layering rule: `data/` knows nothing about HTTP; `routes/` reads the request and
   The preview trigger is limited to `main` because Cloudflare rejected a `*` branch include with no excludes. Both triggers use
   an existing account build token ("Workers Builds - 2026-09-04 01:11"); no secrets live in the repo.
 - Preview URL: https://buydummyflights-preview.phptravels.workers.dev (always noindex). Production: https://buydummyflights.com
-  (noindex until `INDEXING=on`). Only the apex is a Worker custom domain; `www` stays the proxied placeholder behind the zone 301 rule.
+  (indexable: `INDEXING=on`). Only the apex is a Worker custom domain; `www` stays the proxied placeholder behind the zone 301 rule.
 - Compatibility date is 2026-04-01 so that the local workerd accepts it; raise it only with a local `wrangler` that supports it.
 
 ---
@@ -180,8 +186,9 @@ Layering rule: `data/` knows nothing about HTTP; `routes/` reads the request and
 
 ## 8. Indexing launch gate
 
-`INDEXING` (Worker var, default `off`) keeps the production domain `noindex` (meta, `X-Robots-Tag`, `Disallow: /`) until the owner
-sets it to `on` in `wrangler.jsonc` after confirming prices and the order flow. localhost and `*.workers.dev` are noindex regardless.
+`INDEXING` (Worker var) is **`on`** for production in `wrangler.jsonc` (owner approved on 2026-11-05) and `off` in `env.preview`. With it on, production sends no
+`X-Robots-Tag` and no `noindex` meta, and `/robots.txt` is `Allow: /`, `Disallow: /order`, `Disallow: /api/`, `Sitemap: https://buydummyflights.com/sitemap.xml`.
+localhost and `*.workers.dev` are noindex regardless. Set it back to `off` to take the site out of indexing again (the next build deploys it).
 
 ## 9. Measured quality (r3)
 
@@ -197,3 +204,4 @@ The best-practices loss is one deprecation warning inside the vendored Alpine bu
 - 2026-11-05 r1: Hono + hono/jsx site scaffolded: home page, /order mock, SEO system, CSP, i18n, tools, Workers config, launch gate.
 - 2026-11-05 r2: Workers `buydummyflights` and `buydummyflights-preview` created, Workers Builds connected to this repo, custom domain buydummyflights.com attached.
 - 2026-11-05 r3: multi-page site (16 content pages, dropdown nav, full footer), blog with 11 articles, `/sitemap-blog.xml`, container widened to 80rem, home guides strip, contact mock, checks extended (links, seo).
+- 2026-11-05 r4: Google launch: `/sitemap.xml` is now a sitemap index (`/sitemap-pages.xml`, `/sitemap-blog.xml`), branded XSL view, OG `<image:image>`, no changefreq/priority; `INDEXING=on` for production only; robots.txt names the index; checks extended.

@@ -5,10 +5,12 @@ import { loadWorker, root } from './lib/worker.mjs'
 
 const w = await loadWorker()
 const origin = 'https://buydummyflights.com'
-// BOTH SITEMAPS (MAIN + BLOG). PAGINATION PAGES (/blog/page/N) ARE NOT IN A SITEMAP, SO THEY ARE ADDED BY FOLLOWING THE BLOG INDEX PAGER.
-const sitemaps = ['/sitemap.xml', '/sitemap-blog.xml']
+// SITEMAP INDEX + ITS TWO CHILDREN. ONLY THE CHILDREN LIST PAGES. PAGINATION PAGES (/blog/page/N) ARE NOT IN A SITEMAP, SO THEY ARE ADDED BY FOLLOWING THE BLOG INDEX PAGER.
+const children = ['/sitemap-pages.xml', '/sitemap-blog.xml']
+const sitemaps = ['/sitemap.xml', '/sitemap.xsl', ...children]
+for (const sm of ['/sitemap.xml', '/sitemap.xsl']) { const r = await w.fetch(origin + sm); if (r.status !== 200) { console.error(`FAIL ${sm}: HTTP ${r.status}`); process.exit(1) } }
 const locs = []
-for (const sm of sitemaps) {
+for (const sm of children) {
   const r = await w.fetch(origin + sm)
   if (r.status !== 200) { console.error(`FAIL ${sm}: HTTP ${r.status}`); process.exit(1) }
   locs.push(...[...(await r.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname))

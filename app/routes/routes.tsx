@@ -5,7 +5,8 @@ import { pageByPath, pages } from '../data/pages'
 import type { AppEnv } from '../env'
 import { robotsTxt } from '../seo/robots'
 import { faqSchema, serviceSchema } from '../seo/schema'
-import { blogSitemapXml, sitemapXml } from '../seo/sitemap'
+import { blogSitemapXml, pagesSitemapXml, sitemapIndexXml } from '../seo/sitemap'
+import { sitemapXsl } from '../seo/sitemap-xsl'
 import { site } from '../data/site'
 import { isIndexable } from '../utils/urls'
 import { iconSprite } from '../views/icons'
@@ -89,8 +90,12 @@ app.post('/api/order', postOrder)
 app.post('/api/contact', postContact)
 app.all('/api/*', (c) => c.json({ ok: false, error: 'not_found' }, 404))
 
-app.get('/sitemap.xml', (c) => c.body(sitemapXml(), 200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }))
-app.get('/sitemap-blog.xml', (c) => c.body(blogSitemapXml(), 200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }))
+const XML = { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }
+app.get('/sitemap.xml', (c) => c.body(sitemapIndexXml(), 200, XML))
+app.get('/sitemap-pages.xml', (c) => c.body(pagesSitemapXml(), 200, XML))
+app.get('/sitemap-blog.xml', (c) => c.body(blogSitemapXml(), 200, XML))
+// THE STYLESHEET IS SAME-ORIGIN, SO CHROME APPLIES IT UNDER THE SITE CSP (default-src 'self').
+app.get('/sitemap.xsl', (c) => c.body(sitemapXsl(), 200, { 'Content-Type': 'application/xslt+xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }))
 app.get('/robots.txt', (c) =>
   c.body(robotsTxt(isIndexable(c.env, new URL(c.req.url).host)), 200, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }),
 )

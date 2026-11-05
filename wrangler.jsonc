@@ -1,6 +1,6 @@
 {
   // PRODUCTION is the top level (what Workers Builds deploys with a plain `wrangler deploy`).
-  // INDEXING stays "off" until the owner confirms prices and the order flow (TODO(owner)): the live domain is noindex until then.
+  // INDEXING is "on" for production since the owner approved the Google launch (2026-11-05). Preview below stays "off".
   // PREVIEW is env.preview: a separate Worker on workers.dev. localhost and *.workers.dev are noindex in code (utils/urls.ts).
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "buydummyflights",
@@ -12,7 +12,7 @@
   "build": { "command": "node tools/build-assets.mjs" },
   "assets": { "directory": "./public", "binding": "ASSETS" },
   "observability": { "enabled": true },
-  "vars": { "ENVIRONMENT": "production", "INDEXING": "off", "SITE_ORIGIN": "https://buydummyflights.com" },
+  "vars": { "ENVIRONMENT": "production", "INDEXING": "on", "SITE_ORIGIN": "https://buydummyflights.com" },
   "routes": [{ "pattern": "buydummyflights.com", "custom_domain": true }],
   "env": {
     "preview": {

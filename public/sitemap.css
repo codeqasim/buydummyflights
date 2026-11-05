@@ -1,0 +1,25 @@
+/* STYLES FOR THE BROWSER VIEW OF THE SITEMAPS (sitemap.xsl). A SEPARATE FILE BECAUSE THE CSP FORBIDS INLINE <style>. SAME TOKENS AS THE SITE. */
+:root { --canvas: #f3f5fb; --surface: #fff; --line: #e1e5f1; --ink: #0b1020; --mute: #556080; --accent: #3652f0; --accent-ink: #2a40c8; --soft: #eef1ff; }
+@media (prefers-color-scheme: dark) { :root { --canvas: #0b1020; --surface: #131b3a; --line: #26325e; --ink: #eef1fb; --mute: #9aa6cc; --accent: #8fa0ff; --accent-ink: #b3beff; --soft: #18224a; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent-ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 80rem; margin: 0 auto; padding: 2rem clamp(1.25rem, 3.5vw, 2.75rem) 3rem; }
+.brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; }
+.brand img { width: 2.25rem; height: 2.25rem; border-radius: 0.6rem; }
+.brand b { color: var(--accent); font-weight: 800; }
+h1 { margin: 1.75rem 0 0.5rem; font-size: clamp(1.6rem, 3.5vw, 2.25rem); line-height: 1.15; letter-spacing: -0.02em; }
+.lead { margin: 0 0 1.5rem; max-width: 46rem; color: var(--mute); }
+.stats { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 1.5rem; padding: 0; list-style: none; }
+.stats li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.6rem 1rem; color: var(--mute); font-size: 0.9rem; }
+.stats strong { display: block; color: var(--ink); font-size: 1.4rem; line-height: 1.2; }
+.card { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th { text-align: left; padding: 0.8rem 1rem; background: var(--soft); color: var(--mute); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+td { padding: 0.7rem 1rem; border-top: 1px solid var(--line); vertical-align: top; }
+td.num, th.num { width: 1%; white-space: nowrap; }
+td.url { overflow-wrap: anywhere; }
+tr:hover td { background: var(--soft); }
+.foot { margin-top: 1.5rem; color: var(--mute); font-size: 0.85rem; }
+@media (max-width: 40rem) { th, td { padding: 0.6rem 0.7rem; } }
